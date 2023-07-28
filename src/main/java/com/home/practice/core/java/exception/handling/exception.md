@@ -5,7 +5,7 @@ An Exception refers to abnormal behaviour of an application that occurs at the t
 
 ### Exception Hierarchy:
 
-![img_1.png](img_1.png)
+![img_1.png](Exception_Hierarchy.png)
 
 
 ### Exception propagation:
@@ -32,7 +32,7 @@ An Exception refers to abnormal behaviour of an application that occurs at the t
 
 ### Difference Between checked and unchecked exception:
 
-![img.png](img.png)
+![img.png](Checked_vs_Unchecked.png)
 
 ### Handle Multiple Exception:
 
