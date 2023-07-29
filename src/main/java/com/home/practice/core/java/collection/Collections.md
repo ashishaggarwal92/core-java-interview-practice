@@ -102,17 +102,23 @@ Few Drawbacks:
 - No insertion order
 - retrieval and insertion is very fast , usually o(1)
 - initial capacity is 16 and load factor is 0.75
+- hashCode is used to find out the bucket location in the array
+- Rehashing - happens when we reach the load factor. It doubles the size in power of two
+- Hash collision - When multiple different keys return same hash code then hash collision arises. In this case a linked list is maintained to store multiple key on same bucket location.
+- From Java 8 onwards, when bucket size reaches certain threshhold (usually 8) it transformed in to self balancing BST, which brings the time from O(n) to O(logn). For this to work, keys of the hashMap needs to implement comparable interface.
 
-Internal Structure of HashMap:
-int hash
-K key
-V value
-Node next
 
-Initial capacity is in power of 2. Default is 16
-After 12 elements rehashing takes place.
-Rehashing - process of doubling the capacity of hashmap after reaching load factor
-From Java 8 onwards, in case of hash-collision and linked list size reaches to 8, it will create self balancing BST for chaining
+### Internal Structure of HashMap:
+
+    int hash
+    K key
+    V value
+    Node next
+
+* Initial capacity is in power of 2. Default is 16
+* After 12 elements rehashing takes place.
+
+
 
 
 ### **HashTable:**
