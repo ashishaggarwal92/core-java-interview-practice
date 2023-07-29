@@ -1,10 +1,12 @@
 Java:
 * Heap and stack
 * Memory management in java
+* Garbage collection
 * String constant pool
 * What is time complexity
 * What is space complexity
 * Java 8 features
+* Java 11 feature
 * What is functional interface
 * Write functional interface
 * What is immutable class
@@ -16,6 +18,7 @@ Java:
 * Limit using java 8
 * String buffer vs builder
 * Linear vs non-linear data structure
+* Serialization and transient
 
 
 Coding:

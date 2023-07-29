@@ -22,5 +22,9 @@ JAVA 11 new features:
         $ java HelloWorld.java
 
 6) Java flight Recorder: profiling tool to gather diagnostic and profiling data 
+7) Java 10 introduced var - to detect the data type based on surrounding context
+   
+         var i = 10; // int
+         var str = "Ashish" // String
 
     
