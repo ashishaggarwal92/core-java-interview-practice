@@ -143,10 +143,19 @@ Few Drawbacks:
 
 ### **SynchronizedMap:**
 
-- Write operation acquire lock on entire map
+    // Here it is backed by HashMap
+    HashMap<String, Integer> map = new HashMap<>();
+    Map<String, Integer> syncMap = Collections.synchronizedMap(map);
+    
+
+- when using Collections.synchronizedMap(), null support depends on the input Map. 
+- With HashMap or LinkedHashMap - can have one null as a key 
+- With TreeMap, we cant have null keys
+- read/Write operation acquire lock on entire map
 - Concurrency level cant be set
-- at a given time only one thread is able to write as it acquires lock on entire object
-- Map<String, Integer> syncMap = Collections.synchronizedMap(hashMap);
+- at a given time only one thread is able to read/write as it acquires lock on entire object
+- ###### **Should use - when data consistency is utmost priority**
+
 
 
 ### **ConcurrentHashMap:**
@@ -157,32 +166,36 @@ Few Drawbacks:
 - Underlying DS is hashtable
 - Concurrency level can be set
 - Multiple threads can read at a time without locking
-- For update/write, the thread must lock the particular segment.  This is known as segment locking or bucket locking
+- For update/write, the thread must lock the particular segment.  This is known as segment locking or bucket locking. Segment will be locked only for other write in the same segment
 - there is no locking at the object level
 - It doesn't throw concurrentModificationException is one thread tries to modify it and other is iterating it. Fail safe iterator
-- put(), clear(), putAll(), remove() are not synchronized, concurrent retrieval while writing could give old values
+- put(), clear(), putAll(), remove() are not fully synchronized, concurrent retrieval while writing could give old values
 - if you have few write operation - keeping the concurrency level low will be better
+- ###### **Should use - when concurrent and performance is priority**
 
 In the ConcurrentHashMap Api , you will find the following constants.
 
-static final int DEFAULT_INITIAL_CAPACITY = 16;
-static final int DEFAULT_CONCURRENCY_LEVEL = 16;
+    static final int DEFAULT_INITIAL_CAPACITY = 16;
+    static final int DEFAULT_CONCURRENCY_LEVEL = 16;
 
-Each lock is used to lock the single bucket, which means 16 threads can operate at a given time
+- Each lock is used to lock the single bucket, which means 16 threads can operate at a given time
 
-Read - allows full concurrency for reads, meaning that any given number of threads can read the same key simultaneously. 
+- Read - allows full concurrency for reads, meaning that any given number of threads can read the same key simultaneously. 
 That also means that reads don't block and are not blocked by write operations. Thus, reading from the map could get “old” or inconsistent values.
 
-Write - partial concurrency for writes, which blocks other writes at the same map key and allows writes to different keys.
+- Write - partial concurrency for writes, which blocks other writes at the same map key and allows writes to different keys.
 
-ConcurrentHashMap is best suited when you have multiple readers and a few writers. 
-If writers outnumber the reader, or the writer is equal to the reader, then the performance of 
+- **ConcurrentHashMap is best suited when you have multiple readers and a few writers.** 
+
+- If writers outnumber the reader, or the writer is equal to the reader, then the performance of 
 ConcurrentHashMap effectively reduces to synchronized map or Hashtable. 
-Performance of CHM drops, because you got to lock all portions of Map, 
-and effectively each reader will wait for another writer, operating on that portion of Map. 
-ConcurrentHashMap is a good choice for caches, which can be initialized during application startup and later accessed by many request processing threads.
 
-public ConcurrentHashMap(int initialCapacity,float loadFactor,int concurrencyLevel)
+- Performance of CHM drops, because you got to lock all portions of Map, 
+and effectively each reader will wait for another writer, operating on that portion of Map. 
+
+- ###### **ConcurrentHashMap is a good choice for caches, which can be initialized during application startup and later accessed by many request processing threads.**
+
+        public ConcurrentHashMap(int initialCapacity,float loadFactor,int concurrencyLevel)
 
 
 

@@ -1,4 +1,4 @@
-package com.home.practice.core.java.sorting;
+package com.home.practice.core.java.stream.sorting;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;

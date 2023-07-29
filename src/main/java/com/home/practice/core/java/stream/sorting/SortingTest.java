@@ -1,4 +1,4 @@
-package com.home.practice.core.java.sorting;
+package com.home.practice.core.java.stream.sorting;
 
 import java.util.Arrays;
 import java.util.Comparator;
