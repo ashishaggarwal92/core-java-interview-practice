@@ -45,11 +45,11 @@ public class TestHashMapCustomKeys {
         SimpleNonImmutableClass key = new SimpleNonImmutableClass(1, "Ashish");
         map.put(key, "someValue");
 
-        System.out.println("Key is before Update: " + key + " Hash code of key is: " + key.hashCode());
+        System.out.println("before Update. Key is : " + key + " Hash code of key is: " + key.hashCode());
         // change key using setter method
         key.setName("Harshit");
         // Hash code will change
-        System.out.println("Key is after Update : " + key + " Hash code of key is: " + key.hashCode());
+        System.out.println("after Update. Key is  : " + key + " Hash code of key is: " + key.hashCode());
 
         // This will return false
         System.out.println("Hash Map contains : " + map);
