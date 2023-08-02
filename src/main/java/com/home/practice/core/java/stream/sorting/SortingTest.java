@@ -3,6 +3,7 @@ package com.home.practice.core.java.stream.sorting;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class SortingTest {
 
@@ -21,6 +22,10 @@ public class SortingTest {
         System.out.println("Sort By Name and department");
         Comparator<Person> sortByDepartment = (p1, p2) -> p1.getDepartment().compareTo(p2.getDepartment());
         personList.stream().sorted(sortByName.thenComparing(sortByDepartment)).forEach(System.out::println);
+
+        // sort by salary
+        System.out.println("Sort By salary");
+        personList.stream().sorted(Comparator.comparingInt(Person::getSalary)).collect(Collectors.toList()).forEach(System.out::println);
 
 
     }
