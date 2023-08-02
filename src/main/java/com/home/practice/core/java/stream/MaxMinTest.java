@@ -2,10 +2,7 @@ package com.home.practice.core.java.stream;
 
 import com.home.practice.core.java.functional.interfac.Person;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -25,6 +22,10 @@ public class MaxMinTest {
         List<Person> personList = getPersonList();
         Map<String, Long> groupByDept = personList.stream().collect(Collectors.groupingBy(Person::getDepartment, Collectors.summingLong(Person::getSalary)));
         System.out.println(groupByDept);
+
+        // Average salary of Person
+        OptionalDouble avg = personList.stream().map(x -> x.getSalary()).mapToInt(x -> x).average();
+        System.out.println(avg.getAsDouble());
     }
 
     private static List<Person> getPersonList() {

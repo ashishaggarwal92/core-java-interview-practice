@@ -24,8 +24,8 @@ Two types of garbage collection activity usually happen in Java. These are:
 
 A object is said to be unreachable when no reference is attached to it
 
-Integer i = new Integer(4); // Line 1
-i = null; // Line 2
+    Integer i = new Integer(4); // Line 1
+    i = null; // Line 2
 
 At line 1 - new Integer will be created in Heap
 After line 2 - object created in heap is unreachable hence eligible for GC.

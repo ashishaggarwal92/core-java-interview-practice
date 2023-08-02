@@ -1,12 +1,12 @@
 
 Features of Java 8:
 
-Stream
-Default and static methods in interface
-Functional Interface
-Lambda Expression
-Optional Class
-Method reference
+* Stream
+* Default and static methods in interface
+* Functional Interface
+* Lambda Expression
+* Optional Class
+* Method reference
 
 ### DateTime Api:
 

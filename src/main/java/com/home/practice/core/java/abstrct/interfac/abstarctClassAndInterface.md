@@ -155,9 +155,10 @@ Is a good choice when you think API will not change
 
 
 
-Marker Interface:
-interface without any methods and constants 
-Built in marker interface are Cloneable/Random/Serializable
+### Marker Interface:
+
+* interface without any methods and constants 
+* Built in marker interface are Cloneable/Random/Serializable
 
 Let's take the example of the Cloneable interface. If we try to clone an object that doesn't implement this interface, the JVM throws a CloneNotSupportedException. Thus, the Cloneable marker interface is an indicator to the JVM that we can call the Object.clone() method.
 
