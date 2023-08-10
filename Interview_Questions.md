@@ -3,8 +3,6 @@ Java:
 * Memory management in java
 * Garbage collection
 * String constant pool
-* What is time complexity
-* What is space complexity
 * Java 8 features
 * Java 11 feature
 * What is functional interface
@@ -17,13 +15,15 @@ Java:
 * Filter using java 8
 * Limit using java 8
 * String buffer vs builder
-* Linear vs non-linear data structure
 * Serialization and transient
 
 
 Coding:
+* Linear vs non-linear data structure
 * Fibonacci series program
 * Binary search program
+* What is time complexity
+* What is space complexity
 
 Spring:
 * @service vs @ repository
@@ -36,8 +36,12 @@ Spring:
 * Controller advice
 * How to track exception in microservices
 * Injecting prototype bean in singleton
-* @autowired and default autowire
+* @autowired and default autowiring
 
+
+Spring JPA:
+* @Transactional
+* Multiple Datasource commit and rollback in single transaction
 
 
 Spring security:
@@ -47,7 +51,8 @@ Spring security:
 * Authentication manager
 * Authorization manager
 * Delegation proxy filter
-* How to make api endpoint publicly or privately available.--- using websecirityconfigureradapter
+* How to make api endpoint publicly or privately available.--- using websecurityconfigureradapter
+* Changes in springboot version 3
 
 
 DB:
@@ -60,5 +65,7 @@ DB:
 
 Design pattern:
 * Singleton
-* Write program
-* Clone in singleton
+* SOLID design pattern
+* Factory
+* Abstract Factory
+* Builder
