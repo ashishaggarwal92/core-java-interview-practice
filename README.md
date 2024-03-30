@@ -2,9 +2,9 @@
 Interview Practice of core Java With Questions asked
 
 Topics include:
-1) Functional Interface
-2) Stream
-3) Sorting/ GroupBy
+1) [Functional Interface](./src/main/java/com/home/practice/core/java/functional/interfac/functionalInterface.md)
+2) [Stream](./src/main/java/com/home/practice/core/java/stream/)
+3) [Sorting/ GroupBy](./src/main/java/com/home/practice/core/java/)
 4) Function/Supplier/Consumer/Predicate
 5) Immutable class
 6) Why Keys in hashmap are immutable
