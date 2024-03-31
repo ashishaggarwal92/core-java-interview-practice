@@ -1,6 +1,4 @@
-# core-java-interview-practice
-
-## Core Java Topics include:
+# Core Java Topics
 
 1) [Abstract class and Interface](./src/main/java/com/home/practice/core/java/abstrct/interfac/abstarctClassAndInterface.md)
     - Abstract Class
@@ -61,10 +59,10 @@
 
 
 
-## [Check file Interview_Questions](./Interview_Questions.md)
+# [Check file Interview_Questions](./Interview_Questions.md)
 
 
-## [Data Structure](./src/main/java/com/home/practice/)
+# [Data Structure](./src/main/java/com/home/practice/)
 
 - Bubble Sort
 - Selection Sort

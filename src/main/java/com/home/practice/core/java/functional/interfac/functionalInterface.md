@@ -1,4 +1,4 @@
-Functional Interface:
+# Functional Interface
 
 1) Must have only one abstract method
 2) can have default and static
@@ -10,19 +10,20 @@ Functional Interface:
         int computeYearlySalary(int a, int b);
     }
 
-Four type:
+## Four type:
 
-1) Function:
-    - Takes Two argument Function<Integer, Long>
-    - Integer is input and Long is output
-    - Check FunctionTest class
+### 1) Function:
+- Takes Two argument Function<Integer, Long>
+- Integer is input and Long is output
+- Check FunctionTest class
    
-    BiFunction: 
+    
+   BiFunction: 
     - Takes 2 input argument and 1 output argument
 
 
-2) Predicate:
-    - Takes one Input Argument and return boolean
+### 2) Predicate:
+- Takes one Input Argument and return boolean
     
   BiPredicate: Takes 2 argument   
 
@@ -39,9 +40,9 @@ Four type:
             IntPredicate intPredicateGreaterThan10 = x -> x > 10;
             System.out.println(intPredicateGreaterThan0.and(intPredicateGreaterThan10).test(3)); // false
 
-3) Consumer:
-    - Takes one input argument and doesn't return 
-    - forEach accepts consumer and doesn't return any thing
+### 3) Consumer:
+- Takes one input argument and doesn't return 
+- forEach accepts consumer and doesn't return any thing
    
 
         // Consumer
@@ -52,8 +53,8 @@ Four type:
         BiConsumer<Integer, Integer> multiply = (x, y) -> System.out.println(x*y);
         Stream.iterate(1, x -> x+1).limit(5).forEach(x -> multiply.accept(x, x+1));
 
-4) Supplier:
-    - No input parameter, return value of type provide in supplier
+### 4) Supplier:
+- No input parameter, return value of type provide in supplier
 
             Supplier<Integer> returnRandomNInteger = () -> new Random().nextInt();
             System.out.println(returnRandomNInteger.get());
