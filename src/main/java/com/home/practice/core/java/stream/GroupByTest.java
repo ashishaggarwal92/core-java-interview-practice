@@ -6,23 +6,15 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class MaxMinTest {
+public class GroupByTest {
 
     public static void main(String[] args) {
 
-        // Max
-        Integer max = Stream.iterate(1, x -> x+1).limit(10).max(Comparator.naturalOrder()).get();
-        System.out.println(max);
-
-        // Min
-        Integer min = Stream.iterate(1, x -> x+1).limit(10).min(Comparator.naturalOrder()).get();
-        System.out.println(min);
-        
+        // Total Salary per department
         List<Person> personList = getPersonList();
+        Map<String, Long> groupByDept = personList.stream().collect(Collectors.groupingBy(Person::getDepartment, Collectors.summingLong(Person::getSalary)));
+        System.out.println(groupByDept);
 
-        // Average salary of Person
-        OptionalDouble avg = personList.stream().map(x -> x.getSalary()).mapToInt(x -> x).average();
-        System.out.println(avg.getAsDouble());
     }
 
     private static List<Person> getPersonList() {
