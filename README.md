@@ -25,7 +25,7 @@
     - Supplier
     - Consumer
     - Predicate
-9) [Stream](./src/main/java/com/home/practice/core/java/stream/)
+9) [Stream](./src/main/java/com/home/practice/core/java/stream/Stream.md)
     - Skip
     - Limit
     - Max
