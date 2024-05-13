@@ -1,5 +1,5 @@
 # Collection In Detail
-
+For more details: https://www.scaler.com/topics/java/collections-in-java/
 **Collection:** Is an interface in util package
 
 **Collections:** is a utility class. sort/min/max
