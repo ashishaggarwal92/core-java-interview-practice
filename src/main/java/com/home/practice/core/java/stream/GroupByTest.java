@@ -15,6 +15,11 @@ public class GroupByTest {
         Map<String, Long> groupByDept = personList.stream().collect(Collectors.groupingBy(Person::getDepartment, Collectors.summingLong(Person::getSalary)));
         System.out.println(groupByDept);
 
+
+        // Collect All person per ID
+        Map<Integer, List<Person>> personById = personList.stream().collect(Collectors.groupingBy(Person::getId, Collectors.toList()));
+        System.out.println(personById);
+
     }
 
     private static List<Person> getPersonList() {
@@ -23,7 +28,8 @@ public class GroupByTest {
         Person p3 = createPerson(6, "Harshit", 5000, "FINANCE");
         Person p4 = createPerson(9, "Mayank", 8000, "IT");
         Person p5 = createPerson(9, "Ashish", 6000, "ADMIN");
-        List<Person> personList = Arrays.asList(p1,p2,p3,p4,p5);
+        Person p6 = createPerson(1, "Ashish", 2000, "ADMIN");
+        List<Person> personList = Arrays.asList(p1,p2,p3,p4,p5, p6);
         return personList;
     }
 
