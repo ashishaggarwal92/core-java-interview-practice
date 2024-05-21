@@ -1,4 +1,5 @@
 Java:
+* Basic Object orientation concepts
 * Heap and stack
 * Memory management in java
 * Garbage collection
@@ -16,7 +17,6 @@ Java:
 * Limit using java 8
 * String buffer vs builder
 * Serialization and transient
-
 
 Coding:
 * Linear vs non-linear data structure
@@ -36,12 +36,14 @@ Spring:
 * Controller advice
 * How to track exception in microservices
 * Injecting prototype bean in singleton
+* Injecting singleton bean in prototype bean
 * @autowired and default autowiring
 
 
 Spring JPA:
 * @Transactional
 * Multiple Datasource commit and rollback in single transaction
+* Hibernate vs JPA
 
 
 Spring security:
@@ -69,3 +71,11 @@ Design pattern:
 * Factory
 * Abstract Factory
 * Builder
+
+Microservice:
+- Design pattern of microservice
+- Load shedding
+- Rate Limit
+- Logs tracing in microservices
+- Feign client
+- 
