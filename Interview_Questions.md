@@ -54,7 +54,7 @@ Spring security:
 * Authorization manager
 * Delegation proxy filter
 * How to make api endpoint publicly or privately available.--- using websecurityconfigureradapter
-* Changes in springboot version 3
+* Changes in spring boot version 3
 
 
 DB:
@@ -73,9 +73,21 @@ Design pattern:
 * Builder
 
 Microservice:
+- Monolithic vs microservices
 - Design pattern of microservice
 - Load shedding
-- Rate Limit
+- Rate Limiter
+- Circuit breaker
 - Logs tracing in microservices
 - Feign client
-- 
+- Api gateway
+- Various type of cyber-attack
+- 12 factor app
+- golden rule of microservices
+- observability
+- Caching
+- Event sourcing
+- OWASP
+- Various types of deployment
+- Logging prometheus grafana app dynamics
+- Kubernetes
